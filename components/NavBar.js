@@ -33,6 +33,9 @@ export default function NavBar() {
             <Link passHref href="/profile">
               <Nav.Link>Profile</Nav.Link>
             </Link>
+            <Link passHref href="/">
+              <Nav.Link>Sign Out</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
