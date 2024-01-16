@@ -24,7 +24,7 @@ export default function NavBar() {
             <Link passHref href="/book/new">
               <Nav.Link>Create Book</Nav.Link>
             </Link>
-            <Link passHref href="/author">
+            <Link passHref href="/authors">
               <Nav.Link>Authors</Nav.Link>
             </Link>
             <Link passHref href="/author/new">
@@ -32,6 +32,9 @@ export default function NavBar() {
             </Link>
             <Link passHref href="/profile">
               <Nav.Link>Profile</Nav.Link>
+            </Link>
+            <Link passHref href="/">
+              <Nav.Link>Sign Out</Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
