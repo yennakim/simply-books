@@ -69,7 +69,7 @@ function AuthorForm({ obj }) {
           type="text"
           placeholder="Enter last name"
           name="last_name"
-          value={formInput.last}
+          value={formInput.last_name}
           onChange={handleChange}
           required
         />
