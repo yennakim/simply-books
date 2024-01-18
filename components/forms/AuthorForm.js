@@ -64,12 +64,12 @@ function AuthorForm({ obj }) {
       </FloatingLabel>
 
       {/* LAST NAME INPUT  */}
-      <FloatingLabel controlId="floatingInput1" label="Last Name" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Last Name" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter last name"
           name="last_name"
-          value={formInput.last}
+          value={formInput.last_name}
           onChange={handleChange}
           required
         />
@@ -82,6 +82,18 @@ function AuthorForm({ obj }) {
           placeholder="Enter email"
           name="email"
           value={formInput.email}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      {/* IMAGE INPUT  */}
+      <FloatingLabel controlId="floatingInput4" label="Author Image" className="mb-3">
+        <Form.Control
+          type="url"
+          placeholder="Enter an image url"
+          name="image"
+          value={formInput.image}
           onChange={handleChange}
           required
         />
