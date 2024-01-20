@@ -7,7 +7,6 @@ import BookCard from '../../components/BookCard';
 
 export default function ViewAuthor() {
   const [authorDetails, setAuthorDetails] = useState({});
-  const [authorBooks, setAuthorBooks] = useState([]);
   const router = useRouter();
 
   // TODO: grab firebaseKey from url
@@ -16,10 +15,6 @@ export default function ViewAuthor() {
   // TODO: make call to API layer to get the data
   useEffect(() => {
     viewAuthorDetails(firebaseKey).then(setAuthorDetails);
-  }, [firebaseKey]);
-
-  useEffect(() => {
-    getAuthorBooks(firebaseKey).then(setAuthorBooks);
   }, [firebaseKey]);
 
   return (
@@ -35,7 +30,7 @@ export default function ViewAuthor() {
         <p>Author Email: <a href={`mailto:${authorDetails.email}`}>{authorDetails.email}</a></p>
         <hr />
         <div className="d-flex flex-wrap">
-          {authorBooks.map((book) => (
+          {authorDetails.books?.map((book) => (
             <BookCard key={book.firebaseKey} bookObj={book} onUpdate={getAuthorBooks} />
           ))}
         </div>
